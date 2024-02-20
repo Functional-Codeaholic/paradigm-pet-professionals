@@ -1,0 +1,48 @@
+@import url('../style.css');
+
+.cats {
+    display: flex;
+    flex-direction: column;
+
+    .advice {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        text-align: justify;
+
+        h2 {
+            width: 100%;
+        }
+
+        ul {
+            li {
+                margin: 0 0 0 .75em;
+                padding: 0 0 0 1.5em;
+            }
+        }
+
+        img {
+            width: var(--gold-ratio-big);
+            -webkit-mask-image: radial-gradient(rgba(0,0,0,1) 50%, rgba(0,0,0,0) 75%);
+            mask-image: radial-gradient(rgba(0,0,0,1) 50%, rgba(0,0,0,0) 75%);
+        }
+
+        .left-text,
+        .right-text {
+            width: var(--gold-ratio-big);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: baseline;
+        }
+
+        .left-img,
+        .right-img {
+            width: var(--gold-ratio-small);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

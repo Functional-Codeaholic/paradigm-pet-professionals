@@ -1,0 +1,262 @@
+@import url('../style.css');
+
+.scheduleAppt {
+    display: flex;
+    flex-direction: column;
+
+    .advice {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+
+        form {
+            overflow: auto;
+            position: relative;
+            top: 1%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-flow: row;
+            width: 64rem;
+            max-width: 100%;
+            margin-bottom: 5rem;
+
+            .fieldpair {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+
+                .text-field {
+                    padding: 1rem 0;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-auto-flow: row;
+                    overflow: visible;
+                    margin: 0 2rem;
+                    position: relative;
+                    width: 50%;
+    
+                    input {
+                        background: transparent;
+                        background-image: linear-gradient(to bottom, transparent calc(100% - 0.25rem), var(--blue) 0.25rem),
+                                          linear-gradient(to bottom, transparent calc(100% - 0.125rem), #ccc 0.125rem);
+                        background-position: center bottom;
+                        background-repeat: no-repeat;
+                        background-size: 0, 100%;
+                        border: none;
+                        outline: none;
+                        padding: 2.5rem 0 1.5rem 0;
+                        transition: all ease 300ms;
+                        border-bottom: 1px solid var(--dim-grey);
+                        font-size: 2rem;
+                        text-align: center;
+    
+                        &:focus {
+                            background-size: 100%, 100%;
+                            border-bottom: 1px solid var(--blue);
+                        }
+                    }
+    
+                    label {
+                        color: var(--dk-blue);
+                        position: absolute;
+                        bottom: 15%;
+                        left: 50%;
+                        transform: translate(-50%, 0);
+                        transition: all ease 300ms;
+                    }
+    
+                    input:focus + label,
+                    input:not(:placeholder-shown) + label {
+                        opacity: 0;
+                        pointer-events: none;
+                    }
+                }
+
+                .select-field {
+                    width: 50%;
+                    text-align: center;
+                    border-bottom: 1px solid black;
+                    padding: 1rem 0 0 0;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-auto-flow: row;
+                    overflow: visible;
+                    margin: 0 2rem;
+                    position: relative;
+                    justify-items: stretch;
+                    bottom: 0.75rem;
+
+                    select {
+                        background: transparent;
+                        border: none;
+                        margin-top: 3rem;
+                        height: 4rem;
+                        line-height: 4rem;
+                        font-size: 1.5rem;
+                        color: var(--dk-blue);
+                        text-align: center;
+                        border-radius: 5px;
+                    }
+
+                    label {
+                        height: 0;
+                        opacity: 0;
+                    }
+                }
+
+                fieldset {
+                    border: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 50%;
+                    margin-top: 3rem;
+    
+                    div {
+                        height: 3.5rem;
+                        text-align: left;
+                        width: 75%;
+                        display: flex;
+                        align-items: center;
+                    }
+    
+                    input {
+                        width: 2.5rem;
+                        aspect-ratio: 1 / 1;
+                        background-color: var(--blue);
+    
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+    
+                    label {
+                        padding-left: 1rem;
+                        
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .datetime {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50%;
+                    height: 100%;
+
+                    input[type="button" i] {
+                        padding: 1rem;
+                        border-radius: 5px;
+                        background: radial-gradient(ellipse at top, var(--silver) 15%, var(--dim-grey) 80%);
+                        color: var(--dk-blue);
+                        text-shadow: 0 0 3px white;
+                        font-weight: 800;
+                        box-shadow: 
+                            inset 2px 2px 5px var(--silver),
+                            2px 2px 5px var(--dim-grey);
+
+                            &:hover {
+                                cursor: pointer;
+                                color: white;
+                                box-shadow: 
+                                    inset 2px 2px 5px white,
+                                    2px 2px 5px black;
+                            }
+            
+                            &:active {
+                                cursor: grab;
+                                color: white;
+                                background: radial-gradient(ellipse at top, var(--dim-grey) 15%, var(--silver) 80%);
+                                box-shadow: 
+                                    inset 2px 2px 5px white,
+                                    2px 2px 5px black;
+                            }
+                    }
+                }
+            }
+
+            .textarea-field {
+                    width: 100%;
+                    height: 15rem;
+                    border-radius: 5px;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-auto-flow: row;
+                    overflow: visible;
+                    margin: 3rem 0;
+                    position: relative;
+
+                textarea {
+                        background: #fff9;
+                        background-image: linear-gradient(to bottom, transparent calc(100% - 0.25rem), var(--blue) 0.25rem),
+                                          linear-gradient(to bottom, transparent calc(100% - 0.125rem), #ccc 0.125rem);
+                        background-position: center bottom;
+                        background-repeat: no-repeat;
+                        background-size: 0, 100%;
+                        padding: .5rem;
+                        transition: all ease 300ms;
+                        border-bottom: 1px solid var(--dim-grey);
+                        font-size: 1.5rem;
+                        z-index: 10;
+    
+                        &:focus {
+                            background-size: 100%, 100%;
+                            border-bottom: 1px solid var(--blue);
+                        }
+                }
+    
+                label {
+                    color: var(--dk-blue);
+                    position: absolute;
+                    bottom: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -25%);
+                    transition: all ease 300ms;
+                    width: 50ch;
+                    z-index: 100;
+                }
+
+                textarea:focus + label,
+                textarea:not(:placeholder-shown) + label {
+                    opacity: 0;
+                    pointer-events: none;
+                }
+            }
+    
+            button {
+                background: radial-gradient(ellipse at top, var(--blue) 15%, var(--dk-blue) 80%);
+                width: 30%;
+                height: 5rem;
+                font-size: 2rem;
+                color: var(--silver);
+                border-radius: 10px;
+                border: 0;
+                box-shadow: 
+                    inset 2px 2px 5px white,
+                    2px 2px 5px black;
+                margin: 3rem auto;
+
+                &:hover {
+                    cursor: pointer;
+                    color: white;
+                    box-shadow: 
+                        inset 2px 2px 5px var(--silver),
+                        2px 2px 5px var(--dim-grey);
+                }
+
+                &:active {
+                    cursor: grab;
+                    color: white;
+                    background: radial-gradient(ellipse at top, var(--dk-blue) 15%, var(--blue) 80%);
+                    box-shadow: 
+                        inset 2px 2px 5px var(--silver),
+                        2px 2px 5px var(--dim-grey);
+                }
+            }
+        }
+    }
+}

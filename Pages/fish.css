@@ -1,0 +1,47 @@
+@import url('../style.css');
+
+.fish {
+    display: flex;
+    flex-direction: column;
+
+    .advice {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: justify;
+        padding: 1rem 0 2rem 0;
+
+        ul {
+            li {
+                margin: 0 0 0 .75em;
+                padding: 0 0 0 1.5em;
+            }
+        }
+
+        .nobullets {
+            list-style-type: none;
+        }
+
+        img {
+            width: var(--gold-ratio-big);
+            -webkit-mask-image: radial-gradient(rgba(0,0,0,1) 50%, rgba(0,0,0,0) 75%);
+            mask-image: radial-gradient(rgba(0,0,0,1) 50%, rgba(0,0,0,0) 75%);
+        }
+
+        .left-text,
+        .right-text {
+            width: var(--gold-ratio-big);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .left-img,
+        .right-img {
+            width: var(--gold-ratio-small);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

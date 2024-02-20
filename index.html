@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>New Pet Care Consultations - Paradigm Pet Professionals</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="icon" type="image/x-icon" href="./Assets/Images/favicon.ico">
+        <script>
+            document.write("<base href='http://" + document.location.host + "' />");
+
+            const html = document.documentElement;
+
+            function toggleMenu() {
+                // show the dropdown menu
+                document.getElementById("Dropdown").classList.toggle("show");
+            }
+            
+            document.write("<link rel='stylesheet' href='./Components/header.css'>");
+            document.write("<link rel='stylesheet' href='./Components/sidebar.css'>");
+            document.write("<link rel='stylesheet' href='./Components/footer.css'>");
+
+            async function addElements() {
+                const header = await fetch('./Components/header.html');
+                const headerhtml = await header.text();
+                const sidebar = await fetch('./Components/sidebar.html');
+                const sidebarhtml = await sidebar.text();
+                const footer = await fetch('./Components/footer.html');
+                const footerhtml = await footer.text();
+                document.body.insertAdjacentHTML("afterbegin", headerhtml);
+                container.insertAdjacentHTML("afterend", footerhtml);
+                mainContent.insertAdjacentHTML("afterend", sidebarhtml);
+            }
+        </script>
+    </head>
+    <body onLoad="javascript:addElements()">
+        <main>
+            <div id="container">
+                <section class="hero" id="mainContent">
+                    <h1>New Pet Care Consultation</h1>
+                    <p>
+                        Pets are nature's gift to humanity. It has been scientifically proven that opening 
+                        our homes and hearts to a pet increases our longevity and improves our overall 
+                        quality of life as well as the lives of our pets. At Pet Paradigm Professionals, 
+                        our mission is to offer resources to help you care for your furry, scaly, feathery, 
+                        and slimy loved ones. Our pet experts—or “Pexperts”—have been working with pet 
+                        owners and professionals alike for the past twelve years. They offer one-on-one 
+                        New Pet Care Consultations with current and prospective pet owners as well as group presentations 
+                        designed for veterinary, pet shelter, and pet breeding professionals.
+                    </p>
+            
+                    <div class="advice">
+                        <h2>Pet-specific Information:</h2>
+                        <p>
+                            Looking for basic pet care advice for the most common type of pets? Need 
+                            additional help determining which type of pet is right for you and your family? 
+                            We will work with you and provide tailored evidence-based pet care to ensure 
+                            lifelong health and wellness of your new companion. 
+                        </p>
+                        <div class="pets">
+                            <div class="pet dogs">
+                                <a href="./Pages/dogs.html"><img src="./Assets/Images/dog-kiss.webp" alt="Dachsun kissing woman"></a>
+                                <h3><a href="./Pages/dogs.html">DOGS</a></h3>
+                            </div>
+                            <div class="pet cats">
+                                <a href="./Pages/cats.html"><img src="./Assets/Images/girl-hugging-cat.webp" alt="Girl Hugging Cat"></a>
+                                <h3><a href="./Pages/cats.html">CATS</a></h3>
+                            </div>
+                            <div class="pet fish">
+                                <a href="./Pages/fish.html"><img src="./Assets/Images/girl-with-fish.webp" alt="Girl with fish"></a>
+                                <h3><a href="./Pages/fish.html">FISH</a></h3>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="newPet">
+                        <h2>Looking for your new best friend?</h2>
+                        <p>
+                            The following organizations can help you find and adopt the perfect companion:
+                        </p>
+                        <ul>
+                            <li><a href="https://theshelterpetproject.org/">General Adoption Resources</a></li>
+                            <li><a href="https://www.aspca.org/">American Society for the Prevention of Cruelty to Animals(ASPCA)</a></li>
+                            <li><a href="https://www.sterlingshelter.org/humane-society/koi-fish-rescue/">Sterling Shelter Fish Rescue</a></li>
+                            <li><a href="https://savethesnakes.org/snakerescuecall/">Save the Snakes Snake Rescue</a></li>
+                            <li><a href="https://ftlob.rescuegroups.org/">For the Love of Birds Bird Rescue</a></li>
+                        </ul>
+                        <p>
+                            We are also happy to help you navigate the adoption process! We will guide you 
+                            through each step in the process: from determining which type of pet is best 
+                            suited for your family and home environment, to completing the necessary 
+                            paperwork, to bringing your new loved one home. Please fill out our 
+                            <a href="./Pages/contact.html">contact form</a> 
+                            to request a consultation. We will contact you within 48 hours to schedule a 
+                            consultation. (All fields are required.)
+        
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>

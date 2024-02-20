@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Your Pets - Paradigm Pet Professionals</title>
+    <link rel="stylesheet" href="./register.css">
+    <link rel="icon" type="image/x-icon" href="../Assets/Images/favicon.ico">
+    <script>
+        document.write("<base href='http://" + document.location.host + "' />");
+
+        const html = document.documentElement;
+
+        function toggleMenu() {
+            // show the dropdown menu
+            document.getElementById("Dropdown").classList.toggle("show");
+        }
+        
+        document.write("<link rel='stylesheet' href='./Components/header.css'>");
+        document.write("<link rel='stylesheet' href='./Components/sidebar.css'>");
+        document.write("<link rel='stylesheet' href='./Components/footer.css'>");
+
+        async function addElements() {
+            const header = await fetch('./Components/header.html');
+            const headerhtml = await header.text();
+            const sidebar = await fetch('./Components/sidebar.html');
+            const sidebarhtml = await sidebar.text();
+            const footer = await fetch('./Components/footer.html');
+            const footerhtml = await footer.text();
+            document.body.insertAdjacentHTML("afterbegin", headerhtml);
+            container.insertAdjacentHTML("afterend", footerhtml);
+            mainContent.insertAdjacentHTML("afterend", sidebarhtml);
+        }
+    </script>
+</head>
+<body onLoad="javascript:addElements()">
+    <main>
+        <div id="container">
+            <section class="registration" id="mainContent">
+                <h1>Register FREE to Get Personalized Tips & Discounts</h1>
+                <div class="advice">
+                    <p>
+                        Sign up to our FREE membership to get information about your specific pets, 
+                        tips on care and feeding, and special discounts on our 
+                        <a href="./schedule.html">New Pet Care Consultations</a>
+                        delivered right to your inbox, cell phone, or PPP Portal.
+                    </p>
+                    <form action="">
+                        <div class="text-field">
+                            <input type="text" name="FirstName" id="FirstName" placeholder=" " />
+                            <label for="FirstName">Your First Name</label>
+                        </div>
+                        <div class="text-field">
+                            <input type="text" name="LastName" id="LastName" placeholder=" " />
+                            <label for="LastName">Your Last Name</label>
+                        </div>
+                        <div class="text-field">
+                            <input type="text" name="Pet1Name" id="Pet1Name" placeholder=" " />
+                            <label for="Pet1Name">What is your first pet's name?</label>
+                        </div>
+                        <div class="select-field">
+                            <select name="What kind of animal is this pet?" id="What kind of animal is this pet?">
+                              <option value="" id="choose" selected disabled> &#8275; Please select Pet Type &#8275; </option>
+                              <option value="Dog">Dog</option>
+                              <option value="Cat">Cat</option>
+                              <option value="Fish">Fish</option>
+                              <option value="Snake">Snake</option>
+                              <option value="Bird">Bird</option>
+                              <option value="Other">Other (specify)</option>
+                            </select>
+                            <label for="What kind of animal is this pet?">Pet Type</label>
+                        </div>
+                        <small><i>Once pet type is selected, specific info (breed, age, other text box) will appear</i></small>
+                        <div class="text-field">
+                            <input type="text" name="Pet1Age" id="Pet1Age" placeholder=" " />
+                            <label for="Pet1Age">How old is this pet?</label>
+                        </div>
+                        <div class="text-field">
+                            <input type="phone" id="phone" name="phone" placeholder=" " />
+                            <label for="phone">Phone Number</label>
+                        </div>
+                        <div class="text-field">
+                            <input type="emailAddress" id="emailAddress" name="emailAddress" placeholder=" " />
+                            <label for="emailAddress">Email Address</label>
+                        </div>
+                        <div>
+                            <fieldset>
+                                <legend>What is your preferred method of contact? (check all that apply)</legend>
+                                <div>
+                                    <input type="checkbox" id="sms" name="contact" value="sms" />
+                                    <label for="sms">Text Message/SMS</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="email" name="contact" value="email" />
+                                    <label for="email">Email</label>
+                                </div>
+                                <label for="ContactPref"></label>
+                            </fieldset>
+                        </div>
+
+
+                        <button>Register</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

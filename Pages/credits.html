@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Credits and Citations - Paradigm Pet Professionals</title>
+        <link rel="stylesheet" href="./credits.css">
+        <link rel="icon" type="image/x-icon" href="./Assets/Images/favicon.ico">
+        <script>
+            document.write("<base href='http://" + document.location.host + "' />");
+    
+            function toggleMenu() {
+                document.getElementById("Dropdown").classList.toggle("show");
+            }
+
+            window.onclick = function(e) {
+                if (!event.target.matches('.hamburger')) {
+                    let dropdowns = document.getElementsByClassName("dropdown");
+                    let i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        let open = dropdowns[i];
+                        if (openDropdown.classlist.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+            
+            document.write("<link rel='stylesheet' href='../Components/header.css'>");
+            document.write("<link rel='stylesheet' href='../Components/sidebar.css'>");
+            document.write("<link rel='stylesheet' href='../Components/footer.css'>");
+
+            async function addElements() {
+                const header = await fetch('./Components/header.html');
+                const headerhtml = await header.text();
+                const sidebar = await fetch('./Components/sidebar.html');
+                const sidebarhtml = await sidebar.text();
+                const footer = await fetch('./Components/footer.html');
+                const footerhtml = await footer.text();
+                document.body.insertAdjacentHTML("afterbegin", headerhtml);
+                container.insertAdjacentHTML("afterend", footerhtml);
+                mainContent.insertAdjacentHTML("afterend", sidebarhtml);
+            }
+        </script>
+    </head>
+    <body onLoad="javascript:addElements()">
+        <main>
+            <div id="container">
+                <section class="citations" id="mainContent">
+                    <div class="credits">
+                        <div class="disclaimer">
+                            <p>
+                                This site is not intended to be a real marketing website for any existing entity. It was created as a school 
+                                project by and for Brian Quinney. Artwork not created by Brian Quinney is the property of the credited owners, 
+                                and no license or rights have been given unless otherwise stated on the owner's website.
+                            </p>
+                            <p>Artwork credits can be found by cross-referencing the name given to the artwork on this site with the url listed.</p>
+                        </div>
+                        <!--
+                        <h2>Video sources:</h2>
+                        <ul>
+                            <li>Promo video from Hero section - samoa_0: <a href="https://www.samoa.travel/Content/Images/home-vids/1950x832%20Website%20Desktop%20Homepage%20video.mp4">Samoa.travel</a></li>
+                        </ul>
+                        -->
+                        <h2>Text citations:</h2>
+                        <ul>
+                            <li>
+                                Content for "news/blog" panel:
+                                Adams, C. (2024, February 9). 
+                                <i>Why Does My Cat Reach His Paw Out to Me? 9 Vet-Verified Reasons.</i>
+                                Catster. Retrieved February 15, 2024, from 
+                                <a href="https://www.catster.com/guides/why-do-cats-reach-paws-out/">https://www.catster.com/guides/why-do-cats-reach-paws-out/</a> 
+                            </li>
+                            <li>
+                                All other text derived from assigned coursework or created by Brian Quinney of 
+                                <a href="https://functionalcodeaholic.com">Functional Codeaholic</a>
+                            </li>
+                        </ul>
+                        <h2>Image sources:</h2>
+                        <ul>
+                            <li>logo: taken from site link provided in course content from Western Governors University</li>
+                            <li>favicon: derived from logo taken from site link provided in course content from Western Governors University</li>
+                            <li>hamburger: created by Brian Quinney of <a href="https://functionalcodeaholic.com">Functional Codeaholic</a></li>
+                            <li>dog-tag: created by Brian Quinney of <a href="https://functionalcodeaholic.com">Functional Codeaholic</a></li>
+                            <li>Social Icons: created by Brian Quinney of <a href="https://functionalcodeaholic.com">Functional Codeaholic</a>, using logos of respective companies</li>
+                            <li>RSS Icon: created by Brian Quinney of <a href="https://functionalcodeaholic.com">Functional Codeaholic</a> based on standard rss icon</li>
+                            <li>dog-training_0: <a href="https://assets.petco.com/petco/image/upload/f_auto,q_auto:best/petco-training-hero-lifestyle-img-1000x666">petco.com</a></li>
+                            <li>dog-hose: Property of <a href="https://beachedmermaidphotography.com">Beached Mermaid Photography</a></li>
+                            <li>dog-kiss: <a href="https://www.pexels.com/photo/woman-in-grey-top-hugging-brown-dachshund-1139793/">Pexels.com</a></li>
+                            <li>girl-hugging-cat: <a href="https://www.pexels.com/photo/happy-girl-hugging-kitten-5264055/">Pexels.com</a></li>
+                            <li>girl-with-fish: <a href="https://www.pexels.com/photo/small-girl-enjoying-goldfish-in-the-aquarium-8434686/">Pexels.com</a></li>
+                            <li>cat-reaching-up: <a href="https://www.catster.com/wp-content/uploads/2023/11/cat-reaching-out.jpg">Catster.com</a></li>
+                            <li>cat-and-kitten: <a href="https://cdn.mos.cms.futurecdn.net/k2yxh9RrGjRN3GnCBqEngS.jpg">FutureCDN.com</a></li>
+                            <li>woman-kissing-kitten: <a href="https://nhspca.org/assets/DSC7632.jpg">NHSPCA.org</a></li>
+                            <li>woman-holding-cat: <a href="https://www.pexels.com/photo/charming-woman-kissing-cute-cat-in-bedroom-6001183/">Pexels.com</a></li>
+                            <li>old-cat: <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tired_20-year-old_cat.jpg/1200px-Tired_20-year-old_cat.jpg">WikiPedia.org/WikiMedia.org</a></li>
+                            <li>woman-dog-sunrise: <a href="https://www.pexels.com/photo/photo-of-person-holding-black-and-white-dog-1452717/">Pexels.com</a></li>
+                            <li>man-grooming-dog: <a href="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/newscms/2018_15/1331174/dog-groomer-today-tease-180411.jpg">NBCNews.com</a></li>
+                            <li>fish-aquarium: <a href="https://assets.petco.com/petco/image/upload/f_auto,q_auto/saltwater-aquarium-setup-caresheet-hero">PetCo.com</a></li>
+                            <li>boy-with-aquarium: <a href="https://media.gettyimages.com/id/1437661237/photo/little-boy-looking-at-the-gold-fishes.jpg?s=2048x2048&w=gi&k=20&c=zAPmaEOz_IkrLFNU9ATHaoRVuYmfaScBoD2KJ4loYLw=">GettyImages.com</a></li>
+                            <li>girl-dad-saltwater-aquarium: <a href="https://media.gettyimages.com/id/486441859/photo/quality-time-with-her-father-and-the-fish.jpg?s=2048x2048&w=gi&k=20&c=d78HAM5vu-oCeKeYn1jIAZ7QS6rSUxxaqTxQjze221M=">GettyImages.com</a></li>
+                            <li>make-tap-water-fish-safe: <a href="https://www.aquariumnexus.com/wp-content/uploads/2019/11/make-tap-water-fish-safe.jpg">AquariumNexus.com</a></li>
+                            <li>dog-flea-treatment: <a href="https://contentgrid.homedepot-static.com/hdus/en_US/DTCCOMNEW/Articles/how-to-get-rid-of-fleas-step-2.jpg">HomeDepot.com</a></li>
+                            <li>man-with-birds: <a href="https://th-i.thgim.com/public/incoming/zaqsae/article65054909.ece/alternates/LANDSCAPE_1200/conure_birds_4.jpg">THGim.com</a></li>
+                            <li>girl-with-snake: <a href="https://metro.co.uk/wp-content/uploads/2016/11/601802421.jpg?quality=90&strip=all">Metro.Co.UK</a></li>
+                            <li>swimming-clownfish: <a href="https://www.pinterest.com/pin/new-gif-on-nature-august-12-2019-at-1156am-nature-outdoor-gif-httpwwwexploreseraccom--785878203716503727/">Pinterest.com</a></li>
+                            <li>baby-dog-tug-o-war: <a href="https://i.makeagif.com/media/9-20-2015/8R-CN1.gif">MakeAGif.com</a></li>
+                            <li>kitten-attacks-fingers: <a href="https://media1.tenor.com/m/bkjUPwv3-VcAAAAC/kitty-tumbling.gif">Tenor.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="copy">
+                        <div class="copyright">
+                            &copy; 2024 <a href="https://functionalcodeaholic.com">Functional Codeaholic</a>. All Rights reserved.
+                        </div>
+                        <div class="license">
+                            All content not credited to other sources is the exclusive property of Brian Quinney and <a href="https://functionalcodeaholic.com">Functional Codeaholic</a>.
+                            No license is given for any duplication without express, written consent by Brian Quinney.
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>

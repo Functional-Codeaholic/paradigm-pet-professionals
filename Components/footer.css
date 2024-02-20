@@ -1,0 +1,39 @@
+footer {
+    width: 100%;
+    min-height: 6rem;
+    position: relative;
+    background: var(--dk-blue);
+
+    .links {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        justify-content: space-evenly;
+        align-items: start;
+        padding: 2rem 0;
+
+        ul {
+
+            li {
+                list-style-type: none;
+
+                a {
+                    color: white;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+
+    .copyrightCitations {
+        width: 100vw;
+        padding: 1rem 0;
+        text-align: center;
+
+        a {
+            font-size: 1.6rem;
+            color: white;
+        }
+    }
+}
+

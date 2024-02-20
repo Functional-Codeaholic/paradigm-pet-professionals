@@ -1,0 +1,259 @@
+header {
+    height: 20.68rem;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 2px 5px #000;
+    background: var(--silver);
+    background: radial-gradient(ellipse at top, var(--silver) 15%, var(--dim-grey) 100%);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav .hamburger {
+    width: 16.92rem;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 1vw;
+    top: 1vw;
+    z-index: 1000;
+    transition: all 0.2s ease-in-out;
+} 
+
+header nav .hamburger:hover {
+    cursor: pointer;
+    -webkit-filter: 
+        drop-shadow(0 0 13px var(--silver)); /** needed for safari at least up to v9 */
+    filter: 
+        drop-shadow(0 0 13px var(--silver));
+    transform: 
+        scale(1.1)
+        translateX(1vw);
+}
+
+header nav .hamburger svg {
+    stroke: var(--blue);
+    stroke-width: 2px;
+    fill: var(--dk-blue);
+    width: 16.92rem;
+    aspect-ratio: 1 / 1;
+} 
+
+header nav .dropdown {
+    display: block !important;
+    left: 2vw;
+    text-align: center;
+    font-size: 3.2rem;
+    position: absolute;
+    z-index: 100;
+    top: -11vw;
+    transform: scaleY(0);
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+header nav .show {
+    top: 11vw;
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+header nav .dropdown ul {
+    border: 1px solid var(--dk-blue);
+    background-color: var(--blue);
+    box-shadow: 0 1px 3px #000;
+    border-radius: 3px;
+}
+
+header nav .dropdown ul li {
+    list-style-type: none;
+    padding: 0.25vw 1vw;
+    background: radial-gradient(ellipse at top, var(--blue) 15%, var(--dk-blue) 80%);
+    border-bottom: 1px solid var(--dk-blue);
+    box-shadow: 
+        inset 0 3px 3px var(--dk-blue),
+        0 3px 3px #00000066;
+}
+
+header nav .dropdown ul li:last-child {
+    border: none;
+}
+
+header nav .dropdown ul li:hover {
+    background-color: var(--dk-blue);
+    box-shadow: 
+        inset 0 3px 3px #00000066,
+        0 3px 3px var(--blue);
+}
+
+header nav .dropdown ul li a {
+    text-decoration: none;
+    font-family: var(--font);
+    width: 100%;
+    display: block;
+    color: var(--silver);
+    text-shadow: 0 0 2px var(--blue);
+}
+
+header nav .dropdown ul li:hover {
+    background: radial-gradient(ellipse at bottom, var(--blue) 15%, var(--dk-blue) 80%);
+    text-shadow: 0 0 2px var(--blue);
+}
+
+header nav .dropdown ul li a:hover {
+    color: var(--dim-grey);
+    text-shadow: 0 0 2px var(--silver);
+}
+
+.mainHeader {
+    width: 100vw;
+    height: 18.8rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.mainHeader .register {
+    width: 35.5vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 10vw;
+}
+
+.mainHeader .register a {
+    text-decoration: none;
+    background-image: url('../Assets/Images/dog-tag.webp');
+    background-size: cover;
+    width: 26.32rem;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 2px #fff;
+    transition: all .2s ease-in-out;
+}
+
+.mainHeader .register a:hover {
+    transform: 
+        scale(1.1)
+        rotate(-5deg);
+    -webkit-filter: 
+        drop-shadow(0 0 13px var(--silver)); /** needed for safari at least up to v9 */
+    filter: 
+        drop-shadow(0 0 13px var(--silver));
+}
+
+.mainHeader .schedule {
+    width: 35.5vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 10vw;
+}
+
+.mainHeader .schedule a {
+    text-decoration: none;
+    background-image: url('../Assets/Images/dog-tag.webp');
+    background-size: cover;
+    width: 26.32rem;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 2px #fff;
+    transition: all .2s ease-in-out;
+}
+
+.mainHeader .schedule a:hover {
+    transform: 
+        scale(1.1) 
+        rotate(5deg);
+    -webkit-filter: 
+        drop-shadow(0 0 13px var(--silver)); /** needed for safari at least up to v9 */
+    filter: 
+        drop-shadow(0 0 13px var(--silver));
+}
+
+.mainHeader .register a h2, 
+.mainHeader .register a h3,
+.mainHeader .schedule a h2, 
+.mainHeader .schedule a h3 {
+    color: var(--dk-blue) !important;
+}
+
+.logo {
+    width: 23rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo a img {
+    height: 11rem;
+    transition: all .2s ease-in-out;
+    -webkit-filter: 
+        drop-shadow(0 0 13px white); /** needed for safari at least up to v9 */
+    filter: 
+        drop-shadow(0 0 13px white);
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.signIn {
+    width: 15vw;
+    position: absolute;
+    top: 1rem;
+    right: 3rem;
+    font-size: 1.6rem;
+    text-align: right;
+    color: white;
+    font-family: var(--font);
+}
+
+.signIn a {
+    color: white;
+    font-family: var(--font);
+}
+
+.slogan {
+    position: absolute;
+    top: 18.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font);
+    font-style: italic;
+    color: var(--dk-blue);
+    font-size: 1.6rem;
+    text-shadow: 
+        0 0 3px var(--silver),
+        0 0 2px var(--dk-blue);
+    -webkit-backdrop-filter: blur(3px); /** needed for safari at least up to v9 */
+    backdrop-filter: blur(3px);
+}

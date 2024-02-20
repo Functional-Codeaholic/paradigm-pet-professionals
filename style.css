@@ -1,0 +1,188 @@
+:root {
+    font-size: 62.5%;
+    --font: Shantell;
+    --dk-blue: #003B6D;
+    --silver: #BDBDBD;
+    --blue: #6699CC;
+    --dim-grey: #676767;
+    --gold-ratio-big: 61.803%;
+    --gold-ratio-small: calc(100% - var(--gold-ratio-big));
+}
+
+@font-face {
+    font-family: Shantell;
+    src:    url('./Assets/Fonts/Shantell_Sans/ShantellSans-Regular.otf') format('opentype'),
+            url('./Assets/Fonts/Shantell_Sans/ShantellSans-Regular.woff') format('woff'),
+            url('./Assets/Fonts/Shantell_Sans/ShantellSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Shantell;
+    src:    url('./Assets/Fonts/Shantell_Sans/ShantellSans-Italic.otf') format('opentype'),
+            url('./Assets/Fonts/Shantell_Sans/ShantellSans-Italic.woff') format('woff'),
+            url('./Assets/Fonts/Shantell_Sans/ShantellSans-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Shantell;
+    src:    url('./Assets/Fonts/Shantell_Sans/ShantellSans-ExtraBold.otf') format('opentype'),
+            url('./Assets/Fonts/Shantell_Sans/ShantellSans-ExtraBold.woff') format('woff'),
+            url('./Assets/Fonts/Shantell_Sans/ShantellSans-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Shantell;
+    src:    url('./Assets/Fonts/Shantell_Sans/ShantellSans-ExtraBoldItalic.otf') format('opentype'),
+            url('./Assets/Fonts/Shantell_Sans/ShantellSans-ExtraBoldItalic.woff') format('woff'),
+            url('./Assets/Fonts/Shantell_Sans/ShantellSans-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--dk-blue);
+    background-image: url(./Assets/Images/dog-hose.webp);
+    background-position: top 12rem center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    text-align: center;
+    font-family: var(--font);
+}
+
+h1 {
+    font-size: 3.2rem;
+    font-family: var(--font);
+}
+
+h2 {
+    font-size: 2.4rem;
+    font-family: var(--font);
+}
+
+h3 {
+    font-size: 1.9rem;
+}
+
+h4 {
+    font-size: 1.6rem;
+}
+
+h5 {
+    font-size: 1.4rem;
+}
+
+h6 {
+    font-size: 1.3rem;
+}
+
+main {
+    min-height: 77vh;
+    width: 100vw;
+    position: relative;
+    top: 23rem;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+}
+
+#mainContent {
+    position: relative;
+    top: 0;
+    margin: 0 1vw 1vw 1vw;
+    width: 67vw;
+    border-radius: 15px;
+    border: 1px solid #ffffff66;
+    background-color: #ffffffbb;
+    color: var(--dk-blue) !important;
+    box-shadow: 0 0 5px white;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 1rem 3rem;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.hero h2 {
+    padding-top: 3rem;
+}
+
+.hero h3 a {
+    text-decoration: none;
+    font-family: var(--font);
+    color: var(--dk-blue);
+}
+
+.hero .pets {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.hero .pets .pet {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .pets .pet img {
+    width: 200px;
+    -webkit-mask-image: radial-gradient(rgba(0,0,0,1) 40%, rgba(0,0,0,0) 80%);
+    mask-image: radial-gradient(rgba(0,0,0,1) 40%, rgba(0,0,0,0) 80%);
+    transition: all .2s ease-in-out;
+}
+
+.hero .pets .pet img:hover {
+    transform: scale(1.1);
+    -webkit-filter: 
+        drop-shadow(0 0 20px white); /** needed for safari at least up to v9 */
+    filter: 
+        drop-shadow(0 0 20px white);
+}
+
+.hero .newPet p {
+    padding: 1rem 0;
+}
+
+.hero .newPet  ul {
+    list-style-type: none;
+}
