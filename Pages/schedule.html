@@ -1,129 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schedule New Pet Care Consultation - Paradigm Pet Professionals</title>
-    <link rel="stylesheet" href="./schedule.css">
-    <link rel="icon" type="image/x-icon" href="./Assets/Images/favicon.ico">
-    <script>
-        document.write("<base href='https://" + document.location.host + "/paradigm-pet-professionals/' />");
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Schedule New Pet Care Consultation - Paradigm Pet Professionals</title>
+        <link rel="stylesheet" href="./schedule.css">
+        <link rel="icon" type="image/x-icon" href="../Assets/Images/favicon.ico">
+        <script>
+            document.write("<base href='https://" + document.location.host + "/paradigm-pet-professionals/' />");
 
-        const html = document.documentElement;
+            const html = document.documentElement;
 
-        function toggleMenu() {
-            // show the dropdown menu
-            document.getElementById("Dropdown").classList.toggle("show");
-        }
-        
-        document.write("<link rel='stylesheet' href='./Components/header.css'>");
-        document.write("<link rel='stylesheet' href='./Components/sidebar.css'>");
-        document.write("<link rel='stylesheet' href='./Components/footer.css'>");
+            function toggleMenu() {
+                // show the dropdown menu
+                document.getElementById("Dropdown").classList.toggle("show");
+            }
+            
+            document.write("<link rel='stylesheet' href='./Components/header.css'>");
+            document.write("<link rel='stylesheet' href='./Components/sidebar.css'>");
+            document.write("<link rel='stylesheet' href='./Components/footer.css'>");
 
-        async function addElements() {
-            const header = await fetch('./Components/header.html');
-            const headerhtml = await header.text();
-            const sidebar = await fetch('./Components/sidebar.html');
-            const sidebarhtml = await sidebar.text();
-            const footer = await fetch('./Components/footer.html');
-            const footerhtml = await footer.text();
-            document.body.insertAdjacentHTML("afterbegin", headerhtml);
-            container.insertAdjacentHTML("afterend", footerhtml);
-            mainContent.insertAdjacentHTML("afterend", sidebarhtml);
-        }
-    </script>
-</head>
-<body onLoad="javascript:addElements()">
-    <main>
-        <div id="container">
-            <section class="scheduleAppt" id="mainContent">
-                <h1>Schedule a New Pet Care Consultation</h1>
-                <div class="advice">
-                    <p>
-                        Fill out the form below and choose a date to schedule your New Pet Care Consultation with a Paradigm Pet Professionals "Pexpert"
-                    </p>
-                    <form action="">
-                        <div class="fieldpair">
-                            <div class="text-field">
-                                <input type="text" name="FirstName" id="FirstName" placeholder=" " />
-                                <label for="FirstName">Your First Name</label>
-                            </div>
-                            <div class="text-field">
-                                <input type="text" name="LastName" id="LastName" placeholder=" " />
-                                <label for="LastName">Your Last Name</label>
-                            </div>
-                        </div>
-                        <div class="fieldpair">
-                            <div class="text-field">
-                                <input type="text" name="PetName" id="PetName" placeholder=" " />
-                                <label for="PetName">Pet Name</label>
-                            </div>
-                            <div class="text-field">
-                                <input type="text" name="PetAge" id="PetAge" placeholder=" " />
-                                <label for="PetAge">Pet Age</label>
-                            </div>
-                        </div>
-                        <div class="fieldpair">
-                            <div class="select-field">
-                                <select name="PetType" id="PetType">
-                                  <option value="" id="choose" selected disabled> &#8275; Pet Type &#8275; </option>
-                                  <option value="Dog">Dog</option>
-                                  <option value="Cat">Cat</option>
-                                  <option value="Fish">Fish</option>
-                                  <option value="Snake">Snake</option>
-                                  <option value="Bird">Bird</option>
-                                  <option value="Other">Other (specify)</option>
-                                </select>
-                                <label for="PetType">Pet Type &#9660;</label>
-                            </div>
-                            <div class="text-field">
-                                <input type="text" name="PetBreed" id="PetBreed" placeholder=" " />
-                                <label for="PetBreed">Breed</label>
-                            </div>
-                        </div>
-                        <div class="fieldpair">
-                            <div class="text-field">
-                                <input type="phone" id="phone" name="phone" placeholder=" " />
-                                <label for="phone">Phone Number</label>
-                            </div>
-                            <div class="text-field">
-                                <input type="emailAddress" id="emailAddress" name="emailAddress" placeholder=" " />
-                                <label for="emailAddress">Email Address</label>
-                            </div>
-                        </div>
-                        <div class="fieldpair">
-                            <fieldset>
-                                <legend>What is your preferred method of contact? (check all that apply)</legend>
-                                <div>
-                                    <input type="checkbox" id="sms" name="contact" value="sms" />
-                                    <label for="sms">Text Message/SMS</label>
+            async function addElements() {
+                const header = await fetch('./Components/header.html');
+                const headerhtml = await header.text();
+                const sidebar = await fetch('./Components/sidebar.html');
+                const sidebarhtml = await sidebar.text();
+                const footer = await fetch('./Components/footer.html');
+                const footerhtml = await footer.text();
+                document.body.insertAdjacentHTML("afterbegin", headerhtml);
+                container.insertAdjacentHTML("afterend", footerhtml);
+                mainContent.insertAdjacentHTML("afterend", sidebarhtml);
+            }
+        </script>
+    </head>
+    <body onLoad="javascript:addElements()">
+        <main>
+            <div id="container">
+                <section class="scheduleAppt" id="mainContent">
+                    <h1>Schedule a New Pet Care Consultation</h1>
+                    <div class="advice">
+                        <p>
+                            Fill out the form below and choose a date to schedule your New Pet Care Consultation with a Paradigm Pet Professionals "Pexpert"
+                        </p>
+                        <form action="">
+                            <div class="fieldpair">
+                                <div class="text-field">
+                                    <input type="text" name="FullName" id="FullName" placeholder=" " />
+                                    <label for="FullName">Your Full Name</label>
                                 </div>
-                                <div>
-                                    <input type="checkbox" id="email" name="contact" value="email" />
-                                    <label for="email">Email</label>
+                                <div class="select-field">
+                                    <select name="timeZone" id="timeZone">
+                                    <option value="" id="choose" selected disabled> &#8275; Please Select Your Time Zone &#8275; </option>
+                                    <option value="Hawaii">Hawaii</option>
+                                    <option value="Alaska">Alaska</option>
+                                    <option value="Pacific">Pacific</option>
+                                    <option value="Mountain">Mountain</option>
+                                    <option value="Central">Central</option>
+                                    <option value="Eastern">Eastern</option>
+                                    <option value="Other">Other (specify)</option>
+                                    </select>
+                                    <label for="timeZone">Time Zone</label>
                                 </div>
-                                <div>
-                                    <input type="checkbox" id="phone" name="contact" value="phone" />
-                                    <label for="phone">Phone Call</label>
-                                </div>
-                                <label for="ContactPref"></label>
-                            </fieldset>
-                            <div class="datetime">
-                                <input type="button" id="schedule" name="schedule" value="Click to Schedule Appointment">
                             </div>
-                        </div>
+                            <div class="fieldpair">
+                                <div class="text-field">
+                                    <input type="phone" id="phone" name="phone" placeholder=" " />
+                                    <label for="phone">Phone Number</label>
+                                </div>
+                                <div class="text-field">
+                                    <input type="emailAddress" id="emailAddress" name="emailAddress" placeholder=" " />
+                                    <label for="emailAddress">Email Address</label>
+                                </div>
+                            </div>
+                            <div class="fieldpair">
+                                <div class="text-field">
+                                    <input type="text" name="PetName" id="PetName" placeholder=" " />
+                                    <label for="PetName">Pet Name</label>
+                                </div>
+                                <div class="text-field">
+                                    <input type="text" name="PetAge" id="PetAge" placeholder=" " />
+                                    <label for="PetAge">Pet Age</label>
+                                </div>
+                            </div>
+                            <div class="fieldpair">
+                                <div class="select-field">
+                                    <select name="PetType" id="PetType">
+                                    <option value="" id="choose" selected disabled> &#8275; Pet Type &#8275; </option>
+                                    <option value="Dog">Dog</option>
+                                    <option value="Cat">Cat</option>
+                                    <option value="Fish">Fish</option>
+                                    <option value="Snake">Snake</option>
+                                    <option value="Bird">Bird</option>
+                                    <option value="Other">Other (specify)</option>
+                                    </select>
+                                    <label for="PetType">Pet Type &#9660;</label>
+                                </div>
+                                <div class="text-field">
+                                    <input type="text" name="PetBreed" id="PetBreed" placeholder=" " />
+                                    <label for="PetBreed">Breed</label>
+                                </div>
+                            </div>
+                            <div class="fieldpair">
+                            </div>
+                            <div class="fieldpair">
+                                <fieldset>
+                                    <legend>What is your preferred method of contact? (check all that apply)</legend>
+                                    <div>
+                                        <input type="checkbox" id="sms" name="contact" value="sms" />
+                                        <label for="sms">Text Message/SMS</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="email" name="contact" value="email" />
+                                        <label for="email">Email</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="phone" name="contact" value="phone" />
+                                        <label for="phone">Phone Call</label>
+                                    </div>
+                                    <label for="ContactPref"></label>
+                                </fieldset>
+                            </div>
 
-                        <div class="textarea-field">
-                            <textarea name="other" id="other" cols="30" rows="10" placeholder=" "></textarea>
-                            <label for="other">What concerns would you like to address with your "Pexpert" during your New Pet Care Consultation?</label>
-                        </div>
+                            <div class="textarea-field">
+                                <textarea name="other" id="other" cols="30" rows="10" placeholder=" "></textarea>
+                                <label for="other">What concerns would you like to address with your "Pexpert" during your New Pet Care Consultation?</label>
+                            </div>
 
 
-                        <button>Register</button>
-                    </form>
-                </div>
-            </section>
-        </div>
-    </main>
-</body>
+                            <button>Schedule</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </body>
 </html>

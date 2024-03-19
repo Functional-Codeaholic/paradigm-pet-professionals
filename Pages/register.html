@@ -46,44 +46,66 @@
                         delivered right to your inbox, cell phone, or PPP Portal.
                     </p>
                     <form action="">
-                        <div class="text-field">
-                            <input type="text" name="FirstName" id="FirstName" placeholder=" " />
-                            <label for="FirstName">Your First Name</label>
+                        <div class="fieldpair">
+                            <div class="text-field">
+                                <input type="text" name="FullName" id="FullName" placeholder=" " />
+                                <label for="FullName">Your Full Name</label>
+                            </div>
+                            <div class="select-field">
+                                <select name="timeZone" id="timeZone">
+                                  <option value="" id="choose" selected disabled> &#8275; Please Select Your Time Zone &#8275; </option>
+                                  <option value="Hawaii">Hawaii</option>
+                                  <option value="Alaska">Alaska</option>
+                                  <option value="Pacific">Pacific</option>
+                                  <option value="Mountain">Mountain</option>
+                                  <option value="Central">Central</option>
+                                  <option value="Eastern">Eastern</option>
+                                  <option value="Other">Other (specify)</option>
+                                </select>
+                                <label for="timeZone">Time Zone</label>
+                            </div>
                         </div>
-                        <div class="text-field">
-                            <input type="text" name="LastName" id="LastName" placeholder=" " />
-                            <label for="LastName">Your Last Name</label>
+                        <div class="fieldpair">
+                            <div class="text-field">
+                                <input type="phone" id="phone" name="phone" placeholder=" " />
+                                <label for="phone">Phone Number</label>
+                            </div>
+                            <div class="text-field">
+                                <input type="emailAddress" id="emailAddress" name="emailAddress" placeholder=" " />
+                                <label for="emailAddress">Email Address</label>
+                            </div>
                         </div>
-                        <div class="text-field">
-                            <input type="text" name="Pet1Name" id="Pet1Name" placeholder=" " />
-                            <label for="Pet1Name">What is your first pet's name?</label>
+                        <div class="fieldpair">
+                            <div class="text-field">
+                                <input type="text" name="PetName" id="PetName" placeholder=" " />
+                                <label for="PetName">Pet Name</label>
+                            </div>
+                            <div class="text-field">
+                                <input type="text" name="PetAge" id="PetAge" placeholder=" " />
+                                <label for="PetAge">Pet Age</label>
+                            </div>
                         </div>
-                        <div class="select-field">
-                            <select name="What kind of animal is this pet?" id="What kind of animal is this pet?">
-                              <option value="" id="choose" selected disabled> &#8275; Please select Pet Type &#8275; </option>
-                              <option value="Dog">Dog</option>
-                              <option value="Cat">Cat</option>
-                              <option value="Fish">Fish</option>
-                              <option value="Snake">Snake</option>
-                              <option value="Bird">Bird</option>
-                              <option value="Other">Other (specify)</option>
-                            </select>
-                            <label for="What kind of animal is this pet?">Pet Type</label>
+                        <div class="fieldpair">
+                            <div class="select-field">
+                                <select name="PetType" id="PetType">
+                                  <option value="" id="choose" selected disabled> &#8275; Pet Type &#8275; </option>
+                                  <option value="Dog">Dog</option>
+                                  <option value="Cat">Cat</option>
+                                  <option value="Fish">Fish</option>
+                                  <option value="Snake">Snake</option>
+                                  <option value="Bird">Bird</option>
+                                  <option value="Other">Other (specify)</option>
+                                </select>
+                                <label for="PetType">Pet Type &#9660;</label>
+                            </div>
+                            <div class="text-field">
+                                <input type="text" name="PetBreed" id="PetBreed" placeholder=" " />
+                                <label for="PetBreed">Breed</label>
+                            </div>
                         </div>
-                        <small><i>Once pet type is selected, specific info (breed, age, other text box) will appear</i></small>
-                        <div class="text-field">
-                            <input type="text" name="Pet1Age" id="Pet1Age" placeholder=" " />
-                            <label for="Pet1Age">How old is this pet?</label>
+                        <div class="fieldpair">
                         </div>
-                        <div class="text-field">
-                            <input type="phone" id="phone" name="phone" placeholder=" " />
-                            <label for="phone">Phone Number</label>
-                        </div>
-                        <div class="text-field">
-                            <input type="emailAddress" id="emailAddress" name="emailAddress" placeholder=" " />
-                            <label for="emailAddress">Email Address</label>
-                        </div>
-                        <div>
+                        <div class="fieldpair">
                             <fieldset>
                                 <legend>What is your preferred method of contact? (check all that apply)</legend>
                                 <div>
@@ -94,11 +116,13 @@
                                     <input type="checkbox" id="email" name="contact" value="email" />
                                     <label for="email">Email</label>
                                 </div>
+                                <div>
+                                    <input type="checkbox" id="phone" name="contact" value="phone" />
+                                    <label for="phone">Phone Call</label>
+                                </div>
                                 <label for="ContactPref"></label>
                             </fieldset>
                         </div>
-
-
                         <button>Register</button>
                     </form>
                 </div>

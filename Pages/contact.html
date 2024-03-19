@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="./contact.css">
         <link rel="icon" type="image/x-icon" href="./Assets/Images/favicon.ico">
         <script>
-        document.write("<base href='https://" + document.location.host + "/paradigm-pet-professionals/' />");
+            document.write("<base href='https://" + document.location.host + "/paradigm-pet-professionals/' />");
 
             const html = document.documentElement;
 
@@ -43,18 +43,82 @@
                             What's on your mind today?
                         </p>
                         <form action="">
-                            <div class="text-field">
-                                <input type="text" name="UserName" id="UserName" placeholder=" " />
-                                <label for="UserName">Your Name</label>
+                            <div class="fieldpair">
+                                <div class="text-field">
+                                    <input type="text" name="FullName" id="FullName" placeholder=" " />
+                                    <label for="FullName">Your Full Name</label>
+                                </div>
+                                <div class="select-field">
+                                    <select name="timeZone" id="timeZone">
+                                      <option value="" id="choose" selected disabled> &#8275; Please Select Your Time Zone &#8275; </option>
+                                      <option value="Hawaii">Hawaii</option>
+                                      <option value="Alaska">Alaska</option>
+                                      <option value="Pacific">Pacific</option>
+                                      <option value="Mountain">Mountain</option>
+                                      <option value="Central">Central</option>
+                                      <option value="Eastern">Eastern</option>
+                                      <option value="Other">Other (specify)</option>
+                                    </select>
+                                    <label for="timeZone">Time Zone</label>
+                                </div>
                             </div>
-                            <div class="text-field">
-                                <input type="email" name="email" id="email" placeholder=" " />
-                                <label for="email">Your Email Address</label>
+                            <div class="fieldpair">
+                                <div class="text-field">
+                                    <input type="phone" id="phone" name="phone" placeholder=" " />
+                                    <label for="phone">Phone Number</label>
+                                </div>
+                                <div class="text-field">
+                                    <input type="emailAddress" id="emailAddress" name="emailAddress" placeholder=" " />
+                                    <label for="emailAddress">Email Address</label>
+                                </div>
                             </div>
-
-                            <div class="textarea-field">
-                                <textarea name="other" id="other" cols="30" rows="10" placeholder=" "></textarea>
-                                <label for="other">How can we help you?</label>
+                            <div class="fieldpair">
+                                <div class="text-field">
+                                    <input type="text" name="PetName" id="PetName" placeholder=" " />
+                                    <label for="PetName">Pet Name</label>
+                                </div>
+                                <div class="text-field">
+                                    <input type="text" name="PetAge" id="PetAge" placeholder=" " />
+                                    <label for="PetAge">Pet Age</label>
+                                </div>
+                            </div>
+                            <div class="fieldpair">
+                                <div class="select-field">
+                                    <select name="PetType" id="PetType">
+                                      <option value="" id="choose" selected disabled> &#8275; Pet Type &#8275; </option>
+                                      <option value="Dog">Dog</option>
+                                      <option value="Cat">Cat</option>
+                                      <option value="Fish">Fish</option>
+                                      <option value="Snake">Snake</option>
+                                      <option value="Bird">Bird</option>
+                                      <option value="Other">Other (specify)</option>
+                                    </select>
+                                    <label for="PetType">Pet Type &#9660;</label>
+                                </div>
+                                <div class="text-field">
+                                    <input type="text" name="PetBreed" id="PetBreed" placeholder=" " />
+                                    <label for="PetBreed">Breed</label>
+                                </div>
+                            </div>
+                            <div class="fieldpair">
+                            </div>
+                            <div class="fieldpair">
+                                <fieldset>
+                                    <legend>What is your preferred method of contact? (check all that apply)</legend>
+                                    <div>
+                                        <input type="checkbox" id="sms" name="contact" value="sms" />
+                                        <label for="sms">Text Message/SMS</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="email" name="contact" value="email" />
+                                        <label for="email">Email</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="phone" name="contact" value="phone" />
+                                        <label for="phone">Phone Call</label>
+                                    </div>
+                                    <label for="ContactPref"></label>
+                                </fieldset>
                             </div>
 
                             <button>Contact Us</button>
